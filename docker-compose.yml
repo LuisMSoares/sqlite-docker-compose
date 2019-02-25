@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  myapp:
+    restart: on-failure
+    build: .
+    container_name: flask-sqlite
+    volumes: 
+      - ./code:/app
+    ports:
+      - "5050:5000"
